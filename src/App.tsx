@@ -1,16 +1,8 @@
 import "./App.css";
+import TodoList from "./components/TodoList";
 
 function App() {
-  return (
-    <>
-      <div></div>
-      <h1>To Do list</h1>
-      <div className="card">
-        <input type="text" />
-        <button>Add</button>
-      </div>
-    </>
-  );
+  return <TodoList />;
 }
 
 export default App;
