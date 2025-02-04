@@ -34,7 +34,7 @@ function TodoList() {
   };
   console.log(todos);
   return (
-    <div className="bg-blue-gray-500">
+    <div className="bg-blue-gray-500 flex flex-col items-center ">
       <h1 className="text-3xl font-bold underline">To Do list</h1>
 
       <div className="w-full max-w-sm min-w-[200px] flex items-center gap-2">
@@ -55,8 +55,8 @@ function TodoList() {
           Add Todo
         </Button>
       </div>
-      <div>
-        <ul>
+      <div className="bg-orange-300 ">
+        <ul className="flex flex-col">
           {todos.map((todo) => (
             <li key={todo.id}>
               {" "}
@@ -68,7 +68,11 @@ function TodoList() {
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
               />
-              <span className=" peer-checked:line-through text-red-200">
+              <span
+                className={`peer-checked:line-through text-red-200 ${
+                  todo.checked ? "line-through" : ""
+                }`}
+              >
                 {todo.description}
               </span>
             </li>
