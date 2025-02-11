@@ -55,7 +55,7 @@ function TodoList() {
           Add Todo
         </Button>
       </div>
-      <div className="bg-orange-300 ">
+      <div className="">
         <ul className="flex flex-col">
           {todos.map((todo) => (
             <li key={todo.id}>
