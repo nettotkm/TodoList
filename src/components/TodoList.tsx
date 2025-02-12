@@ -83,8 +83,10 @@ function TodoList() {
                   onPointerLeaveCapture={undefined}
                 />
                 <span
-                  className={`peer-checked:line-through text-2xl text-blue-gray-50  ${
-                    todo.checked ? "line-through" : ""
+                  className={`peer-checked:line-through color text-2xl   ${
+                    todo.checked
+                      ? "line-through text-gray-600 "
+                      : "text-amber-900"
                   }`}
                 >
                   {todo.description}
